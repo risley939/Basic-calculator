@@ -1,0 +1,28 @@
+
+
+def basic_calculator():
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        operator = input("Enter the operator (+, -, *, /): ")
+
+        if operator == '+':
+            result = num1 + num2
+        elif operator == '-':
+            result = num1 - num2
+        elif operator == '*':
+            result = num1 * num2
+        elif operator == '/':
+            result = num1 / num2
+        else:
+            print("put the right number")
+            return
+        
+        print(f"The result is: {result}")
+
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero")
+    except ValueError:
+        print("Error: Invalid input")
+
+basic_calculator()
